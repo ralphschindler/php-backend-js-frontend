@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html data-ng-app="app" ng-strict-di xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Reminders</title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+</head>
+<body>
+  <a href="/#/reminders">Reminders</a> | <a href="/#/locations">Locations</a><br>
+  <div ng-view></div>
+  <script type="text/javascript" src="bower_components/lodash/dist/lodash.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+  <script type="text/javascript" src="app/location/location.module.js"></script>
+  <script type="text/javascript" src="app/location/location.js"></script>
+  <script type="text/javascript" src="app/reminder/reminder.module.js"></script>
+  <script type="text/javascript" src="app/reminder/reminder.js"></script>
+  <script type="text/javascript" src="app/app.module.js"></script>
+  <script type="text/javascript" src="app/api.service.js"></script>
+  <script type="text/javascript" src="app/route-config.js"></script>
+</body>
+</html>

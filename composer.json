@@ -1,0 +1,12 @@
+{
+  "name": "ralphschindler/php-backend-js-frontend",
+  "require": {
+    "php": ">=5.5.0",
+    "silex/silex": "~1.3",
+    "nocarrier/hal": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {"ReminderApp\\": "src"}
+  },
+  "minimum-stability": "dev"
+}

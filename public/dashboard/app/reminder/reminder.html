@@ -1,0 +1,16 @@
+
+<div data-ng-repeat="reminder in vm.reminders">
+
+  <a href="#" editable-text="reminder.text" onbeforesave="vm.updateText($data, $index)">{{ reminder.text || 'empty' }}</a>
+
+  - {{reminder.created_at}} - {{reminder.completed_at}} <br />
+  <div data-ng-if="reminder.remind_at">
+    {{reminder.remind_at}}
+  </div>
+  <div data-ng-if="reminder.remind_near_location_radius_in_feet">
+    {{reminder.remind_near_location_radius_in_feet}} ft to
+    {{reminder._embedded['remind_near_location'].address}} @
+    ({{reminder._embedded['remind_near_location'].longitude}} / {{reminder._embedded['remind_near_location'].latitude}})
+  </div>
+  <hr>
+</div>
