@@ -76,7 +76,7 @@ $app->on('kernel.view', function (GetResponseForControllerResultEvent $e) {
     $result = $e->getControllerResult();
     $response = new Response;
     if ($result instanceof ReminderApp\Resource\ResourceInterface) {
-        $headers = ['Access-Control-Allow-Origin' => '*', 'Access-Control-Allow-Methods' => 'GET, OPTIONS', 'Access-Control-Allow-Headers' => 'Content-Type, X-Requested-With'];
+        $headers = ['Access-Control-Allow-Origin' => '*', 'Access-Control-Allow-Methods' => 'GET, PATCH, OPTIONS', 'Access-Control-Allow-Headers' => 'Content-Type, X-Requested-With'];
         $response->headers->add(array_merge($headers, $result->getHeaders()));
         $response->setStatusCode($result->getResponseCode());
         $response->setContent($result->getContent());
